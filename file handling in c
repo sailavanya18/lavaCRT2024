@@ -1,0 +1,27 @@
+int main()
+{
+ int admno,mat,phy,che,tot;
+ char name[60];
+ float avg;
+ printf("enter admission number:");
+ scanf("%d",&admno);
+ printf("enter name:");
+ scanf("%s",name);
+ printf("enter subject mrks:");
+ scanf("%d%d%d",&mat,&phy,&che);
+ FILE *fp;
+ fp=fopen("student.txt","w");
+ tot=mat+phy+che;
+ avg=tot/3.0;
+ 
+ fprintf(fp,"Admission number:%d",admno);
+ fprintf(fp,"name:%s",name);
+fprintf(fp,"math:%d",mat);
+fprintf(fp,"physics:%d",phy);
+fprintf(fp,"chemistry:%d",che);
+fprintf(fp,"total:%d",tot);
+fprintf(fp,"average:%f",avg);
+
+
+
+    return 0;
